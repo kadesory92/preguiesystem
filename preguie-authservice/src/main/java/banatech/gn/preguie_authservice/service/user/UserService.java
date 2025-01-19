@@ -1,4 +1,4 @@
-package banatech.gn.preguie_authservice.user;
+package banatech.gn.preguie_authservice.service.user;
 
 import banatech.gn.preguie_authservice.request.LoginRequest;
 import banatech.gn.preguie_authservice.request.RegisterRequest;

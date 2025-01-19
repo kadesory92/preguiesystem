@@ -33,7 +33,7 @@ public class SecurityConfig {
     @Autowired
     private AuthEntryPoint unauthorizedHandler;
 
-    private static final String[] WHITE_LIST_URL = { "/h2-console/**", "/signin", "/signup", "/user-dashboard" };
+    private static final String[] WHITE_LIST_URL = { /*"/signin", "/signup", "/user-dashboard"*/"/api/v1/auth/**" };
 
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {

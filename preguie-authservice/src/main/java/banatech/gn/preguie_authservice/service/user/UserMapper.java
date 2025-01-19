@@ -1,4 +1,4 @@
-package banatech.gn.preguie_authservice.user;
+package banatech.gn.preguie_authservice.service.user;
 
 import banatech.gn.preguie_authservice.dto.UserDTO;
 import banatech.gn.preguie_authservice.model.Role;
