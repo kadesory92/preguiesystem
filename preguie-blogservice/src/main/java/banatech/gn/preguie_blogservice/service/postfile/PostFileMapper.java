@@ -1,4 +1,4 @@
-package banatech.gn.preguie_blogservice.service.post;
+package banatech.gn.preguie_blogservice.service.postfile;
 
 import banatech.gn.preguie_blogservice.dto.PostFileDTO;
 import banatech.gn.preguie_blogservice.model.PostFile;
