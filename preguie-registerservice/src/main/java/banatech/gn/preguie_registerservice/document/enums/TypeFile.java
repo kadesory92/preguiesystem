@@ -1,4 +1,4 @@
-package banatech.gn.preguie_registerservice.enums;
+package banatech.gn.preguie_registerservice.document.enums;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -8,11 +8,19 @@ public enum TypeFile {
     IMAGE(1, "Image"),
     VIDEO(2, "Vidéo");
 
-    private int value;
-    private String title;
+    private final int value;
+    private final String title;
 
     TypeFile(int value, String title){
         this.value = value;
         this.title = title;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

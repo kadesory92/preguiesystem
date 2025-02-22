@@ -1,4 +1,4 @@
-package banatech.gn.preguie_registerservice.enums;
+package banatech.gn.preguie_registerservice.document.enums;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -8,10 +8,11 @@ public enum TypeDocument {
     BIRTH_CERTIFICATE(1, "Certificat de naissance"),
     NATIONAL_IDENTITY_CARD(3, "Carte d'Identité Nationale"),
     DIPLOMA(4, "Diplôme"),
-    TRANSCRIPT_GRADES(5, "Relevé de notes"),
-    CERTIFICATE(6, "Certificat"),
-    CV(7, "Curriculum Vitae"),
-    OTHER(8, "Autre...");
+    VISAS(5, "Visa"),
+    TRANSCRIPT_GRADES(6, "Relevé de notes"),
+    CERTIFICATE(7, "Certificat"),
+    CV(8, "Curriculum Vitae"),
+    OTHER(9, "Autre...");
 
     private final int value;
     private final String title;
