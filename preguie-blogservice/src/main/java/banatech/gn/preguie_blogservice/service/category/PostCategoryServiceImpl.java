@@ -38,7 +38,7 @@ public class PostCategoryServiceImpl implements PostCategoryService{
     public List<PostCategoryDTO> getAllCategories() {
         List<PostCategory> categories = postCategoryRepository.findAll();
         return categories.stream()
-                .map(postCategory -> postCategoryMapper.toDto(postCategory)).toList();
+                .map(postCategory -> postCategoryMapper.toDto(postCategory)).collect(Collectors.toList());
     }
 
     @Override

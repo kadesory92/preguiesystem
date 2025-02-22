@@ -4,6 +4,7 @@ import banatech.gn.preguie_blogservice.dto.PostDTO;
 import banatech.gn.preguie_blogservice.exception.ResourceNotFoundException;
 import banatech.gn.preguie_blogservice.model.Post;
 import banatech.gn.preguie_blogservice.model.PostCategory;
+import banatech.gn.preguie_blogservice.model.PostComment;
 import banatech.gn.preguie_blogservice.model.PostFile;
 import banatech.gn.preguie_blogservice.repository.*;
 import banatech.gn.preguie_blogservice.request.PostRequest;
@@ -213,7 +214,8 @@ public class PostServiceImpl implements PostService {
     private PostResponse mapToPostResponse(Post post) {
         PostResponse response = new PostResponse();
         response.setPost(postMapper.toDto(post));
-        response.setComments(postCommentRepository.findById(post.getUuid()).stream()
+//        List<PostComment> postComments = postCommentRepository.findByPostUuid()
+        response.setComments(postCommentRepository.findByPostUuid(post.getUuid()).stream()
                 .map(postComment -> postCommentMapper.toDto(postComment))
                 .collect(Collectors.toList()));
         return response;
@@ -222,7 +224,7 @@ public class PostServiceImpl implements PostService {
     private PostResponse mapToPostResponseWithReactions(Post post) {
         PostResponse response = new PostResponse();
         response.setPost(postMapper.toDto(post));
-        response.setReactions(reactionRepository.findById(post.getUuid()).stream()
+        response.setReactions(reactionRepository.findByPostUuid(post.getUuid()).stream()
                 .map(reaction -> reactionMapper.toDto(reaction))
                 .collect(Collectors.toList()));
         return response;
